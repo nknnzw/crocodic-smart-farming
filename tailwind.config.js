@@ -14,6 +14,8 @@ tailwind.config = {
             'hijau-paling-muda': '#F4FAF4',
             'abu-abu': '#9E9E9E',
             'abu-muda': '#EEEEEE',
+            'white' : '#FFFFFF',
+            'black' : "#000000",
           },
           fontFamily: {
             'poppins': ['Poppins', 'sans-serif'],

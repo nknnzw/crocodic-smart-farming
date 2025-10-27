@@ -16,6 +16,8 @@ tailwind.config = {
             'abu-muda': '#EEEEEE',
             'white' : '#FFFFFF',
             'black' : "#000000",
+            'biru': '#6691FF',
+            'coklat': '#451E07',
           },
           fontFamily: {
             'poppins': ['Poppins', 'sans-serif'],

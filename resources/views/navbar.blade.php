@@ -341,8 +341,14 @@
                 // Deteksi halaman saat ini berdasarkan URL
                 const currentPath = window.location.pathname;
 
-                // Jika di root path, aktifkan beranda
                 if (currentPath === '/' || currentPath === '') {
+                    const berandaItem = document.querySelector('[data-page="beranda"]');
+                    if (berandaItem) {
+                        removeAllActive();
+                        setActive(berandaItem);
+                    }
+                } else if (currentPath === '/notifikasi') {
+                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
                     const berandaItem = document.querySelector('[data-page="beranda"]');
                     if (berandaItem) {
                         removeAllActive();
@@ -352,13 +358,13 @@
                     // Untuk path lainnya, cek berdasarkan data-page
                     navItems.forEach(item => {
                         const page = item.getAttribute('data-page');
-
                         if (currentPath.includes(page)) {
                             removeAllActive();
                             setActive(item);
                         }
                     });
                 }
+
 
                 // Handle click
                 navItems.forEach(item => {

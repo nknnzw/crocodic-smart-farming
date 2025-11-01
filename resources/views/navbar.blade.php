@@ -148,6 +148,22 @@
             color: #C8C6C1;
             font-weight: 500;
         }
+         .custom-scrollbar::-webkit-scrollbar {
+                width: 6px;
+            }
+            
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #d1d5db;
+                border-radius: 3px;
+            }
+            
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: #9ca3af;
+            }
     </style>
 </head>
 

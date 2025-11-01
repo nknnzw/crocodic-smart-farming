@@ -20,14 +20,14 @@
 
                 <!-- Filter Icon -->
                 <div class="flex justify-end">
-                    <button id="filterButton"
-                        class="flex items-center justify-center w-[36px] h-[36px] rounded-full border border-[#1F4E20]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
-                            <path
-                                d="M6 4.12473e-07C5.37935 -0.00032496 4.77387 0.191856 4.26702 0.550057C3.76016 0.908257 3.37688 1.41484 3.17 2H0V4H3.17C3.3766 4.58553 3.75974 5.09257 4.2666 5.45121C4.77346 5.80985 5.37909 6.00245 6 6.00245C6.62091 6.00245 7.22654 5.80985 7.7334 5.45121C8.24026 5.09257 8.6234 4.58553 8.83 4H16V2H8.83C8.62312 1.41484 8.23984 0.908257 7.73298 0.550057C7.22613 0.191856 6.62065 -0.00032496 6 4.12473e-07ZM5 3C5 2.73478 5.10536 2.48043 5.29289 2.29289C5.48043 2.10536 5.73478 2 6 2C6.26522 2 6.51957 2.10536 6.70711 2.29289C6.89464 2.48043 7 2.73478 7 3C7 3.26522 6.89464 3.51957 6.70711 3.70711C6.51957 3.89464 6.26522 4 6 4C5.73478 4 5.48043 3.89464 5.29289 3.70711C5.10536 3.51957 5 3.26522 5 3ZM10 8C9.37935 7.99967 8.77387 8.19186 8.26702 8.55006C7.76016 8.90826 7.37688 9.41484 7.17 10H0V12H7.17C7.3766 12.5855 7.75974 13.0926 8.2666 13.4512C8.77346 13.8099 9.37909 14.0025 10 14.0025C10.6209 14.0025 11.2265 13.8099 11.7334 13.4512C12.2403 13.0926 12.6234 12.5855 12.83 12H16V10H12.83C12.6231 9.41484 12.2398 8.90826 11.733 8.55006C11.2261 8.19186 10.6207 7.99967 10 8ZM9 11C9 10.7348 9.10536 10.4804 9.29289 10.2929C9.48043 10.1054 9.73478 10 10 10C10.2652 10 10.5196 10.1054 10.7071 10.2929C10.8946 10.4804 11 10.7348 11 11C11 11.2652 10.8946 11.5196 10.7071 11.7071C10.5196 11.8946 10.2652 12 10 12C9.73478 12 9.48043 11.8946 9.29289 11.7071C9.10536 11.5196 9 11.2652 9 11Z"
-                                fill="#1F4E20" />
-                        </svg>
-                    </button>
+                    <button onclick="openFilterModal()" type="button"
+                    class="flex items-center justify-center w-[36px] h-[36px] rounded-full border border-[#1F4E20] hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                        <path
+                            d="M6 4.12473e-07C5.37935 -0.00032496 4.77387 0.191856 4.26702 0.550057C3.76016 0.908257 3.37688 1.41484 3.17 2H0V4H3.17C3.3766 4.58553 3.75974 5.09257 4.2666 5.45121C4.77346 5.80985 5.37909 6.00245 6 6.00245C6.62091 6.00245 7.22654 5.80985 7.7334 5.45121C8.24026 5.09257 8.6234 4.58553 8.83 4H16V2H8.83C8.62312 1.41484 8.23984 0.908257 7.73298 0.550057C7.22613 0.191856 6.62065 -0.00032496 6 4.12473e-07ZM5 3C5 2.73478 5.10536 2.48043 5.29289 2.29289C5.48043 2.10536 5.73478 2 6 2C6.26522 2 6.51957 2.10536 6.70711 2.29289C6.89464 2.48043 7 2.73478 7 3C7 3.26522 6.89464 3.51957 6.70711 3.70711C6.51957 3.89464 6.26522 4 6 4C5.73478 4 5.48043 3.89464 5.29289 3.70711C5.10536 3.51957 5 3.26522 5 3ZM10 8C9.37935 7.99967 8.77387 8.19186 8.26702 8.55006C7.76016 8.90826 7.37688 9.41484 7.17 10H0V12H7.17C7.3766 12.5855 7.75974 13.0926 8.2666 13.4512C8.77346 13.8099 9.37909 14.0025 10 14.0025C10.6209 14.0025 11.2265 13.8099 11.7334 13.4512C12.2403 13.0926 12.6234 12.5855 12.83 12H16V10H12.83C12.6231 9.41484 12.2398 8.90826 11.733 8.55006C11.2261 8.19186 10.6207 7.99967 10 8ZM9 11C9 10.7348 9.10536 10.4804 9.29289 10.2929C9.48043 10.1054 9.73478 10 10 10C10.2652 10 10.5196 10.1054 10.7071 10.2929C10.8946 10.4804 11 10.7348 11 11C11 11.2652 10.8946 11.5196 10.7071 11.7071C10.5196 11.8946 10.2652 12 10 12C9.73478 12 9.48043 11.8946 9.29289 11.7071C9.10536 11.5196 9 11.2652 9 11Z"
+                            fill="#1F4E20" />
+                    </svg>
+                </button>
                 </div>
 
                 <!-- Tabs -->
@@ -335,6 +335,60 @@
                 </div>
             </div>
 
+            <!--Modal Filter -->
+<div id="filterModal" class="hidden fixed inset-0 z-[60]">
+    <!-- Overlay transparan untuk klik di luar -->
+    <div class="absolute inset-0"></div>
+
+    <!-- Modal content -->
+    <div id="modalContent"
+        class="absolute top-[140px] right-4 w-full max-w-[180px] bg-white  shadow-lg border border-gray-200 overflow-hidden transform transition-all duration-300 translate-x-full opacity-0">
+
+        <!-- Header Filter -->
+        <div class="bg-hijau-tua text-white text-center py-1.5 text-sm font-semibold">
+            Semua Lahan
+        </div>
+
+        <!-- Daftar Lahan -->
+        <div id="lahanList" class="grid grid-cols-1 divide-y divide-gray-200 max-h-[400px] overflow-y-auto">
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 1</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 2</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 3</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 4</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 5</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 6</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 7</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 8</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 9</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 10</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 11</div>
+            <div
+                class="py-1.5 text-center text-hijau-tua text-sm font-medium hover:bg-hijau-paling-muda cursor-pointer transition-colors">
+                Lahan 12</div>
+        </div>
+
         </div>
     </div>
 </div>
@@ -392,6 +446,73 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
  });   
+  function openFilterModal() {
+        const modal = document.getElementById('filterModal');
+        const content = document.getElementById('modalContent');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            content.classList.remove('translate-x-full', 'opacity-0');
+        }, 10);
+    }
+
+    function closeFilterModal() {
+        const modal = document.getElementById('filterModal');
+        const content = document.getElementById('modalContent');
+        content.classList.add('translate-x-full', 'opacity-0');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    // Klik overlay untuk menutup modal
+    document.addEventListener('click', function (event) {
+        const modal = document.getElementById('filterModal');
+        const content = document.getElementById('modalContent');
+        const button = event.target.closest('button[onclick="openFilterModal()"]');
+
+        if (modal && !modal.classList.contains('hidden') &&
+            !content.contains(event.target) && !button) {
+            closeFilterModal();
+        }
+    });
+
+    // Pilih lahan dan ubah label
+    document.addEventListener('DOMContentLoaded', function () {
+        const headerFilter = document.querySelector('#modalContent .bg-hijau-tua'); // "Semua Lahan" di header
+        const lahanList = document.querySelectorAll('#lahanList div');
+        const label = document.getElementById('filterLabel');
+
+        function resetAll() {
+            // Reset semua lahan jadi putih
+            lahanList.forEach(i => {
+                i.classList.remove('bg-hijau-tua', 'text-white');
+                i.classList.add('bg-white', 'text-hijau-tua');
+            });
+            // Reset header jadi putih juga
+            headerFilter.classList.remove('bg-hijau-tua', 'text-white');
+            headerFilter.classList.add('bg-white', 'text-hijau-tua');
+        }
+
+        // Klik pada setiap item lahan
+        lahanList.forEach(item => {
+            item.addEventListener('click', () => {
+                resetAll();
+                item.classList.add('bg-hijau-tua', 'text-white');
+                item.classList.remove('bg-white', 'text-hijau-tua');
+                if (label) label.textContent = item.textContent;
+                closeFilterModal();
+            });
+        });
+
+        // Klik pada header “Semua Lahan”
+        headerFilter.addEventListener('click', () => {
+            resetAll();
+            headerFilter.classList.add('bg-hijau-tua', 'text-white');
+            headerFilter.classList.remove('bg-white', 'text-hijau-tua');
+            if (label) label.textContent = 'Semua Lahan';
+            closeFilterModal();
+        });
+    });
    
 </script>
 

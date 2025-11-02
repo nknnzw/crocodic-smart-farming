@@ -370,6 +370,34 @@
                         removeAllActive();
                         setActive(berandaItem);
                     }
+                } else if (currentPath === '/profil') {
+                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
+                    const setelanaItem = document.querySelector('[data-page="setelan"]');
+                    if (setelanaItem) {
+                        removeAllActive();
+                        setActive(setelanaItem);
+                    }  
+                  } else if (currentPath === '/zona') {
+                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
+                    const setelanaItem = document.querySelector('[data-page="setelan"]');
+                    if (setelanaItem) {
+                        removeAllActive();
+                        setActive(setelanaItem);
+                    }
+                   } else if (currentPath === '/tentang') {
+                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
+                    const setelanaItem = document.querySelector('[data-page="setelan"]');
+                    if (setelanaItem) {
+                        removeAllActive();
+                        setActive(setelanaItem);
+                    }
+                    } else if (currentPath === '/notif') {
+                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
+                    const setelanaItem = document.querySelector('[data-page="setelan"]');
+                    if (setelanaItem) {
+                        removeAllActive();
+                        setActive(setelanaItem);
+                    }
                 } else {
                     // Untuk path lainnya, cek berdasarkan data-page
                     navItems.forEach(item => {

@@ -19,44 +19,50 @@
                     <span class="text-black text-[22px] font-semibold">Lahan 1</span>
                 </div>
 
-                
+
             </div>
 
-           <!-- Info Luas & Tanaman -->
-<div class="flex items-start justify-between mb-2">
-    <!-- Kiri: Info Lahan -->
-    <div class="flex flex-col">
-        <p class="text-black text-sm font-medium">
-            Luas: <span class="font-normal">2 Ha</span>
-        </p>
-        <p class="text-black text-sm font-medium">
-            Tanaman: <span class="font-normal">Padi</span>
-        </p>
-    </div>
+            <!-- Info Luas & Tanaman -->
+            <div class="flex items-start justify-between mb-2">
+                <!-- Kiri: Info Lahan -->
+                <div class="flex flex-col">
+                    <p class="text-black text-sm font-medium">
+                        Luas: <span class="font-normal">2 Ha</span>
+                    </p>
+                    <p class="text-black text-sm font-medium">
+                        Tanaman: <span class="font-normal">Padi</span>
+                    </p>
+                </div>
 
-    <!-- Kanan: Edit & Delete Icons -->
-    <div class="flex items-center gap-2">
-        <button class="flex items-center justify-center hover:bg-[#2f6d31] transition">
-            <!-- Edit Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
-<circle cx="26.5" cy="26.5" r="22.5" fill="#1F4E20"/>
-<path d="M17 38.25C16.6458 38.25 16.3492 38.13 16.11 37.89C15.8708 37.65 15.7508 37.3533 15.75 37V33.9688C15.75 33.6354 15.8125 33.3175 15.9375 33.015C16.0625 32.7125 16.2396 32.4471 16.4688 32.2188L32.25 16.4688C32.5 16.2396 32.7763 16.0625 33.0788 15.9375C33.3813 15.8125 33.6987 15.75 34.0312 15.75C34.3638 15.75 34.6867 15.8125 35 15.9375C35.3133 16.0625 35.5842 16.25 35.8125 16.5L37.5312 18.25C37.7812 18.4792 37.9633 18.75 38.0775 19.0625C38.1917 19.375 38.2492 19.6875 38.25 20C38.25 20.3333 38.1925 20.6513 38.0775 20.9538C37.9625 21.2562 37.7804 21.5321 37.5312 21.7812L21.7812 37.5312C21.5521 37.7604 21.2862 37.9375 20.9837 38.0625C20.6812 38.1875 20.3638 38.25 20.0312 38.25H17ZM34 21.75L35.75 20L34 18.25L32.25 20L34 21.75Z" fill="white"/>
-</svg>
-        </button>
+                <!--  Edit & Delete Icons -->
+                <div class="flex items-center gap-2">
+                    <button class="flex items-center justify-center" onclick="openEditModal()">
+                        <!-- Edit Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53"
+                            fill="none">
+                            <circle cx="26.5" cy="26.5" r="22.5" fill="#1F4E20" />
+                            <path
+                                d="M17 38.25C16.6458 38.25 16.3492 38.13 16.11 37.89C15.8708 37.65 15.7508 37.3533 15.75 37V33.9688C15.75 33.6354 15.8125 33.3175 15.9375 33.015C16.0625 32.7125 16.2396 32.4471 16.4688 32.2188L32.25 16.4688C32.5 16.2396 32.7763 16.0625 33.0788 15.9375C33.3813 15.8125 33.6987 15.75 34.0312 15.75C34.3638 15.75 34.6867 15.8125 35 15.9375C35.3133 16.0625 35.5842 16.25 35.8125 16.5L37.5312 18.25C37.7812 18.4792 37.9633 18.75 38.0775 19.0625C38.1917 19.375 38.2492 19.6875 38.25 20C38.25 20.3333 38.1925 20.6513 38.0775 20.9538C37.9625 21.2562 37.7804 21.5321 37.5312 21.7812L21.7812 37.5312C21.5521 37.7604 21.2862 37.9375 20.9837 38.0625C20.6812 38.1875 20.3638 38.25 20.0312 38.25H17ZM34 21.75L35.75 20L34 18.25L32.25 20L34 21.75Z"
+                                fill="white" />
+                        </svg>
+                    </button>
 
-        <button class="flex items-center justify-center hover:bg-[#2f6d31] transition">
-            <!-- Delete Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="53" viewBox="0 0 50 53" fill="none">
-<circle cx="26.5" cy="26.5" r="22.5" fill="#1F4E20"/>
-<path d="M35.75 17H31.375L30.125 15.75H23.875L22.625 17H18.25V19.5H35.75M19.5 35.75C19.5 36.413 19.7634 37.0489 20.2322 37.5178C20.7011 37.9866 21.337 38.25 22 38.25H32C32.663 38.25 33.2989 37.9866 33.7678 37.5178C34.2366 37.0489 34.5 36.413 34.5 35.75V20.75H19.5V35.75Z" fill="white"/>
-</svg>
-        </button>
-    </div>
-</div>
+                    <button class="flex items-center justify-center" onclick="openDeleteModal()">
+                        <!-- Delete Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="53" viewBox="0 0 50 53"
+                            fill="none">
+                            <circle cx="26.5" cy="26.5" r="22.5" fill="#1F4E20" />
+                            <path
+                                d="M35.75 17H31.375L30.125 15.75H23.875L22.625 17H18.25V19.5H35.75M19.5 35.75C19.5 36.413 19.7634 37.0489 20.2322 37.5178C20.7011 37.9866 21.337 38.25 22 38.25H32C32.663 38.25 33.2989 37.9866 33.7678 37.5178C34.2366 37.0489 34.5 36.413 34.5 35.75V20.75H19.5V35.75Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
 
             <!-- Tambah Sensor Button -->
-            <button id="btn-tambah-sensor"
+            <button onclick="openSensorModal()" id="btn-tambah-sensor"
                 class="w-full h-14 bg-hijau-tua text-white rounded-lg px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 hover:bg-green-800 transition-colors duration-200 mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                     <path
@@ -101,7 +107,8 @@
                 <!-- Jadwal -->
                 <div class="flex items-center justify-between mb-3">
                     <span class="text-sm font-medium text-gray-700">Jadwal</span>
-                    <button class="p-1">
+                    <!-- Button Filter -->
+                    <button onclick="openFilterModal()" class="p-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
                             fill="none">
                             <circle cx="17" cy="17" r="17" transform="matrix(-1 0 0 1 41 8)" fill="#AAAAAA"
@@ -166,7 +173,7 @@
                 <!-- Jadwal -->
                 <div class="flex items-center justify-between mb-3">
                     <span class="text-sm font-medium text-gray-700">Jadwal</span>
-                    <button class="p-1">
+                    <button onclick="openFilterModal()" class="p-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
                             fill="none">
                             <circle cx="17" cy="17" r="17" transform="matrix(-1 0 0 1 41 8)"
@@ -202,7 +209,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Tabs -->
             <div class="w-full h-[39px]">
                 <div class="flex w-full">
@@ -230,8 +237,7 @@
                     </h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/npkharian.png') }}"
-                            data-alt="{{ asset('asset/img/npkharian_2.png') }}"
-                            alt="npk"
+                            data-alt="{{ asset('asset/img/npkharian_2.png') }}" alt="npk"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -249,8 +255,7 @@
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Suhu Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/suhutanahharian.png') }}"
-                            data-alt="{{ asset('asset/img/suhutanahharian_2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/suhutanahharian_2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -263,8 +268,7 @@
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik pH Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
-                        <img src="{{ asset('asset/img/phtanah.png') }}"
-                            data-alt="{{ asset('asset/img/phtanah_2.png') }}"
+                        <img src="{{ asset('asset/img/phtanah.png') }}" data-alt="{{ asset('asset/img/phtanah_2.png') }}"
                             alt="ph"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
@@ -275,8 +279,7 @@
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Kelembapan Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/kelembabantanahharian.png') }}"
-                            data-alt="{{ asset('asset/img/kelembabantanahharian_2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/kelembabantanahharian_2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -290,8 +293,7 @@
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Suhu Lingkungan</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/suhulingkunganharian.png') }}"
-                            data-alt="{{ asset('asset/img/suhulingkunganharian_2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/suhulingkunganharian_2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -305,8 +307,7 @@
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Kelembapan Lingkungan</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/kelembabanlinkunganharian.png') }}"
-                            data-alt="{{ asset('asset/img/kelembabanlingkunganharian2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/kelembabanlingkunganharian2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -325,8 +326,7 @@
                     </h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/npkmingguan.png') }}"
-                            data-alt="{{ asset('asset/img/npkmingguan2.png') }}"
-                            alt="npk"
+                            data-alt="{{ asset('asset/img/npkmingguan2.png') }}" alt="npk"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -338,14 +338,13 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Card Suhu Tanah Mingguan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Suhu Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/suhutanahmingguan.png') }}"
-                            data-alt="{{ asset('asset/img/suhutanahmingguan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/suhutanahmingguan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -353,25 +352,23 @@
                         <p class="font-bold mb-1 text-[22px]">21°C</p>
                     </div>
                 </div>
-                
+
                 <!-- Card pH Tanah Mingguan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik pH Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/phtanahmingguan.png') }}"
-                            data-alt="{{ asset('asset/img/phtanahmingguan2.png') }}"
-                            alt="ph"
+                            data-alt="{{ asset('asset/img/phtanahmingguan2.png') }}" alt="ph"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                 </div>
-                
+
                 <!-- Card Kelembaban Tanah mingguan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Kelembapan Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/kelembapantanahmingguan.png') }}"
-                            data-alt="{{ asset('asset/img/kelembapantanahmingguan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/kelembapantanahmingguan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -379,14 +376,13 @@
                         <p class="font-bold mb-1 text-[22px]">22%</p>
                     </div>
                 </div>
-                
+
                 <!-- Card Suhu Lingkungan minggu -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Suhu Lingkungan</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/suhulingkunganmingguan.png') }}"
-                            data-alt="{{ asset('asset/img/suhulingkunganmingguan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/suhulingkunganmingguan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -394,14 +390,13 @@
                         <p class="font-bold mb-1 text-[22px]">25°C</p>
                     </div>
                 </div>
-                
+
                 <!-- Card kelembapan Lingkungan mingguan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Kelembapan Lingkungan</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/kelembapanlingkunganmingguan.png') }}"
-                            data-alt="{{ asset('asset/img/kelembapanlingkunganmingguan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/kelembapanlingkunganmingguan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -420,8 +415,7 @@
                     </h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/npkbulanan.png') }}"
-                            data-alt="{{ asset('asset/img/npkbulanan2.png') }}"
-                            alt="npk"
+                            data-alt="{{ asset('asset/img/npkbulanan2.png') }}" alt="npk"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -433,14 +427,13 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Card Suhu Tanah Bulanan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Suhu Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/suhutanahbulanan.png') }}"
-                            data-alt="{{ asset('asset/img/suhutanahbulanan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/suhutanahbulanan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -448,25 +441,23 @@
                         <p class="font-bold mb-1 text-[22px]">21°C</p>
                     </div>
                 </div>
-                
+
                 <!-- Card pH Tanah Bulanan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik pH Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/phtanahbulanan.png') }}"
-                            data-alt="{{ asset('asset/img/phtanahbulanan2.png') }}"
-                            alt="ph"
+                            data-alt="{{ asset('asset/img/phtanahbulanan2.png') }}" alt="ph"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                 </div>
-                
+
                 <!-- Card Kelembaban Tanah bulanan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Kelembapan Tanah</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/kelembapantanahbulanan.png') }}"
-                            data-alt="{{ asset('asset/img/kelembapantanahbulanan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/kelembapantanahbulanan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -474,14 +465,13 @@
                         <p class="font-bold mb-1 text-[22px]">22%</p>
                     </div>
                 </div>
-                
+
                 <!-- Card Suhu Lingkungan bulanan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Suhu Lingkungan</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/suhulingkunganbulanan.png') }}"
-                            data-alt="{{ asset('asset/img/suhulingkunganbulanan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/suhulingkunganbulanan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -489,14 +479,13 @@
                         <p class="font-bold mb-1 text-[22px]">25°C</p>
                     </div>
                 </div>
-                
+
                 <!-- Card kelembapan Lingkungan bulanan -->
                 <div class="bg-white border border-gray-300 rounded-3xl p-4 mt-3">
                     <h3 class="text-[16px] font-semibold text-hijau-tua mb-3 text-center">Grafik Kelembapan Lingkungan</h3>
                     <div class="w-full h-[250px] rounded flex items-center justify-center">
                         <img src="{{ asset('asset/img/kelembapanlingkunganbulanan.png') }}"
-                            data-alt="{{ asset('asset/img/kelembapanlingkunganbulanan2.png') }}"
-                            alt="suhu"
+                            data-alt="{{ asset('asset/img/kelembapanlingkunganbulanan2.png') }}" alt="suhu"
                             class="npk-image w-full h-full object-contain cursor-pointer transition-all duration-300">
                     </div>
                     <div class="mt-3 text-[12px] text-hijau-tua pl-6">
@@ -505,8 +494,865 @@
                     </div>
                 </div>
             </div>
+            <!-- Modal Overlay -->
+            <div id="filterModal" class="hidden fixed inset-0 z-50">
+                <!-- Modal Content - Positioned exactly like in design -->
+                <div class="bg-white min-w-[402px] min-h-[307px] relative overflow-x-hidden rounded-2xl shadow-2xl"
+                    style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%);">
+
+                    <!-- Header -->
+                    <div class="flex items-center gap-4 absolute top-[35px] left-[24px] w-[356px]">
+                        <button onclick="closeFilterModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="23" viewBox="0 0 15 23"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 20l-9-9 9-9" />
+                            </svg>
+                        </button>
+                        <span class="font-bold text-[24px] text-black">Buat Jadwal Baru</span>
+                    </div>
+
+                    <!-- Atur Waktu -->
+                    <div class="absolute top-[101px] left-[24px] w-[356px] h-[77px]">
+                        <span class="font-medium text-[14px] text-black">Atur Waktu</span>
+
+                        <!-- Input Dari -->
+                        <div class="absolute top-[26px] left-0 w-[122px] h-[51px]">
+                            <span class="absolute top-0 left-0 text-[10px] text-black">Dari</span>
+                            <div
+                                class="absolute top-[19px] left-0 w-[122px] h-[32px] border border-gray-300 rounded-[5px] flex items-center justify-between px-3">
+                                <input type="text" value="08 : 30"
+                                    class="font-medium text-[14px] text-black w-[50px] outline-none bg-transparent">
+                                <div class="relative">
+                                    <div class="flex items-center gap-1 cursor-pointer"
+                                        onclick="toggleDropdown('dropdown1')">
+                                        <span class="text-[12px] text-black" id="selected1">AM</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6"
+                                            viewBox="0 0 8 6" fill="currentColor">
+                                            <path d="M4 6L0 0h8z" />
+                                        </svg>
+                                    </div>
+                                    <div id="dropdown2"
+                                        class="hidden absolute top-6 right-0 bg-white border border-green-800 text-green-800 rounded-md shadow-lg overflow-hidden z-20 min-w-[50px]">
+                                        <div class="py-1 px-3 cursor-pointer hover:bg-green-50 text-[12px] border-b border-green-800"
+                                            onclick="selectAmPm('dropdown2', 'selected2', 'AM')">
+                                            AM
+                                        </div>
+                                        <div class="py-1 px-3 cursor-pointer hover:bg-green-50 text-[12px]"
+                                            onclick="selectAmPm('dropdown2', 'selected2', 'PM')">
+                                            PM
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Separator -->
+                        <div class="absolute top-[45px] left-[145px] text-gray-300 text-[20px]">—</div>
+
+                        <!-- Input Sampai -->
+                        <div class="absolute top-[26px] left-[234px] w-[122px] h-[51px]">
+                            <span class="absolute top-0 left-0 text-[10px] text-black">Sampai</span>
+                            <div
+                                class="absolute top-[19px] left-0 w-[122px] h-[32px] border border-gray-300 rounded-[5px] flex items-center justify-between px-3">
+                                <input type="text" value="05 : 30"
+                                    class="font-medium text-[14px] text-black w-[50px] outline-none bg-transparent">
+                                <div class="relative">
+                                    <div class="flex items-center gap-1 cursor-pointer"
+                                        onclick="toggleDropdown('dropdown2')">
+                                        <span class="text-[12px] text-black" id="selected2">PM</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6"
+                                            viewBox="0 0 8 6" fill="currentColor">
+                                            <path d="M4 6L0 0h8z" />
+                                        </svg>
+                                    </div>
+                                    <div id="dropdown2"
+                                        class="hidden absolute top-6 right-0 bg-white border border-green-800 text-green-800 rounded-md shadow-lg overflow-hidden z-20 min-w-[50px]">
+                                        <div class="py-1 px-3 cursor-pointer hover:bg-green-50 text-[12px] border-b border-green-800"
+                                            onclick="selectAmPm('dropdown2', 'selected2', 'AM')">
+                                            AM
+                                        </div>
+                                        <div class="py-1 px-3 cursor-pointer hover:bg-green-50 text-[12px]"
+                                            onclick="selectAmPm('dropdown2', 'selected2', 'PM')">
+                                            PM
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Atur Tanggal -->
+                    <div class="flex items-center justify-between absolute top-[195px] left-[24px] w-[356px]">
+                        <span class="font-medium text-[14px] text-black">Atur Tanggal</span>
+                        <div class="flex items-center gap-1 cursor-pointer" onclick="openWeekdayModal()">
+                            <span class="text-[10px] text-black" id="selectedSchedule">Weekday</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6"
+                                fill="currentColor">
+                                <path d="M4 6L0 0h8z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Tombol Simpan & Batal -->
+                    <div class="flex items-center gap-[18px] absolute top-[238px] left-[215px]">
+                        <button onclick="closeFilterModal()"
+                            class="flex items-center justify-center h-[34px] px-[10px] rounded-[10px] bg-gray-200 hover:bg-gray-300 transition-colors">
+                            <span class="font-semibold text-[16px] text-green-800">Batal</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center h-[34px] px-[10px] rounded-[10px] bg-green-800 hover:bg-green-900 transition-colors">
+                            <span class="font-semibold text-[16px] text-white">Simpan</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Weekday Selection Modal -->
+            <div id="weekdayModal" class="hidden fixed inset-0 z-50">
+                <div class="relative w-[340px] bg-white rounded-[30px] shadow-2xl p-6"
+                    style="position: absolute; top: 320px; left: 50%; transform: translateX(-50%);">
+
+                    <!-- Icon Back (atas kiri) -->
+                    <button onclick="backToMainModal()" class="mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+
+                    <!-- Container Options -->
+                    <div class="space-y-4">
+
+                        <!-- Weekday -->
+                        <button id="weekdayBtn" onclick="toggleScheduleButton('weekday')"
+                            class="relative w-full h-14 bg-green-400 border-2 border-gray-800 rounded-2xl hover:bg-green-500 transition-colors flex items-center px-4">
+                            <svg id="weekdayCheck" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" class="mr-3">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <span class="font-semibold text-base text-black">Weekday</span>
+                        </button>
+
+                        <!-- Weekend -->
+                        <button id="weekendBtn" onclick="toggleScheduleButton('weekend')"
+                            class="relative w-full h-14 bg-white border-2 border-gray-800 rounded-2xl hover:bg-gray-50 transition-colors flex items-center px-4">
+                            <svg id="weekendCheck" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" class="mr-3 invisible">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                            <span class="font-semibold text-base text-black">Weekend</span>
+                        </button>
+
+                        <!-- Custom -->
+                        <button onclick="selectScheduleType('Custom')"
+                            class="relative w-full h-14 bg-white border-2 border-gray-800 rounded-2xl hover:bg-gray-50 transition-colors flex items-center justify-between px-4">
+                            <span class="font-semibold text-base text-black ml-8">Custom</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Custom Date Modal -->
+            <div id="customDateModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div class="relative w-[337px] bg-white rounded-2xl p-6">
+
+                    <!-- Judul -->
+                    <p class="text-[14px] font-semibold text-black mb-4">
+                        Atur tanggal
+                    </p>
+
+                    <!-- Label Kolom -->
+                    <div class="flex justify-between mb-2 px-3">
+                        <div class="text-[12px] text-gray-500 w-[70px] text-center">Tanggal</div>
+                        <div class="text-[12px] text-gray-500 w-[70px] text-center">Bulan</div>
+                        <div class="text-[12px] text-gray-500 w-[70px] text-center">Tahun</div>
+                    </div>
+
+                    <!-- Frame utama dengan scroll -->
+                    <div
+                        class="relative h-[47px] flex items-center rounded-2xl border border-black bg-white overflow-hidden mb-6">
+
+                        <!-- Scroll tanggal (1-31) -->
+                        <div class="flex-1 h-full flex items-center justify-center relative">
+                            <div id="dateScroll" class="h-[23px] w-[30px] overflow-y-scroll no-scrollbar scroll-smooth">
+                                <div class="flex flex-col items-center gap-[6px] py-[80px]">
+                                    @foreach (range(1, 31) as $day)
+                                        <div class="text-[16px] font-semibold text-black">
+                                            {{ str_pad($day, 2, '0', STR_PAD_LEFT) }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="absolute top-[10px] right-0 w-[3px] h-[27px] bg-black rounded-full rotate-[30deg]">
+                            </div>
+                        </div>
+
+                        <!-- Scroll bulan (1-12) -->
+                        <div class="flex-1 h-full flex items-center justify-center relative">
+                            <div id="monthScroll" class="h-[23px] w-[30px] overflow-y-scroll no-scrollbar scroll-smooth">
+                                <div class="flex flex-col items-center gap-[6px] py-[80px]">
+                                    @foreach (range(1, 12) as $month)
+                                        <div class="text-[16px] font-semibold text-black">
+                                            {{ str_pad($month, 2, '0', STR_PAD_LEFT) }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="absolute top-[10px] right-0 w-[3px] h-[27px] bg-black rounded-full rotate-[30deg]">
+                            </div>
+                        </div>
+
+                        <!-- Scroll tahun (2024-2050) -->
+                        <div class="flex-1 h-full flex items-center justify-center">
+                            <div id="yearScroll" class="h-[23px] w-[50px] overflow-y-scroll no-scrollbar scroll-smooth">
+                                <div class="flex flex-col items-center gap-[6px] py-[80px]">
+                                    @foreach (range(2024, 2050) as $year)
+                                        <div class="text-[16px] font-semibold text-black">{{ $year }}</div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol -->
+                    <div class="flex justify-end gap-3">
+                        <button onclick="closeCustomDateModal()"
+                            class="bg-gray-300 text-black text-[14px] font-semibold px-4 py-1 rounded-lg cursor-pointer hover:bg-gray-400 transition-colors">
+                            Batal
+                        </button>
+                        <button onclick="saveCustomDate()"
+                            class="bg-green-800 text-white text-[14px] font-semibold px-4 py-1 rounded-lg cursor-pointer hover:bg-green-900 transition-colors">
+                            Simpan
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Delete Confirmation -->
+            <div id="deleteModal" class="hidden fixed inset-0 z-[70] flex items-center justify-center">
+                <!-- Overlay dengan blur -->
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+                <!-- Modal Content -->
+                <div class="relative bg-white rounded-3xl w-[90%] max-w-[320px] p-6 shadow-2xl transform transition-all">
+                    <!-- Icon Trash -->
+                    <div class="flex justify-center mb-4">
+                        <div class="w-16 h-16 bg-hijau-tua rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 18 23"
+                                fill="none">
+                                <path
+                                    d="M17.5 1.25H13.125L11.875 0H5.625L4.375 1.25H0V3.75H17.5M1.25 20C1.25 20.663 1.51339 21.2989 1.98223 21.7678C2.45107 22.2366 3.08696 22.5 3.75 22.5H13.75C14.413 22.5 15.0489 22.2366 15.5178 21.7678C15.9866 21.2989 16.25 20.663 16.25 20V5H1.25V20Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <p class="text-center text-black text-base font-medium mb-6 leading-relaxed">
+                        Apakah Anda yakin ingin<br>menghapus lahan 1?
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col gap-3">
+                        <button onclick="confirmDelete()"
+                            class="w-full bg-hijau-tua text-white py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-all">
+                            Hapus
+                        </button>
+                        <button onclick="closeDeleteModal()"
+                            class="w-full bg-transparent text-hijau-tua py-3 rounded-full font-semibold text-base hover:bg-gray-100 transition-all">
+                            Batal
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Edit Modal  -->
+            <div id="editModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div
+                    class="w-full max-w-[402px] min-h-[427px] border-2 border-green-400 bg-white rounded-xl flex flex-col justify-center px-6 py-8 mx-4">
+
+                    <!-- Form -->
+                    <div class="flex flex-col gap-6">
+
+                        <!-- Nama Lahan -->
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[14px] text-black font-medium">Nama Lahan</label>
+                            <input type="text" id="editNamaLahan" value="Lahan 1"
+                                class="w-full h-[55px] border-2 border-hijau-tua bg-white rounded-xl px-4 text-hijau-tua text-[14px] focus:outline-none focus:border-hijau-tua transition-colors"
+                                placeholder="Masukkan nama lahan" />
+                        </div>
+
+                        <!-- Jenis Tanaman -->
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[14px] text-black font-medium">Jenis Tanaman</label>
+                            <input type="text" id="editJenisTanaman" value="Padi"
+                                class="w-full h-[55px] border-2 border-hijau-tua bg-white rounded-xl px-4 text-hijau-tua text-[14px] focus:outline-none focus:border-hijau-tua transition-colors"
+                                placeholder="Masukkan jenis tanaman" />
+                        </div>
+
+                        <!-- Luas Lahan -->
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[14px] text-black font-medium">Luas Lahan</label>
+                            <div class="relative">
+                                <input type="number" id="editLuasLahan" value="2"
+                                    class="w-full h-[55px] border-2 border-hijau-tua bg-white rounded-xl px-4 pr-12 text-hijau-tua text-[14px] focus:outline-none focus:border-hijau-tua transition-colors"
+                                    placeholder="Masukkan luas lahan" step="0.1" min="0" />
+                                <span
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 text-green-800 text-[14px] font-medium">Ha</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tombol -->
+                    <div class="flex justify-end gap-4 mt-8">
+                        <button onclick="closeEditModal()"
+                            class="bg-gray-200 text-green-800 font-semibold text-[16px] px-5 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                            Batal
+                        </button>
+                        <button onclick="saveEditData()"
+                            class="bg-green-800 text-white font-semibold text-[16px] px-5 py-2 rounded-lg hover:bg-green-900 transition-colors">
+                            Simpan
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Container -->
+            <div id="sensorModal" class="hidden fixed inset-0 z-[100] flex items-end justify-center">
+                <!-- Overlay -->
+                <div onclick="closeSensorModal()"
+                    class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300" id="sensorOverlay">
+                </div>
+
+                <!-- Modal Content Wrapper -->
+                <div id="sensorModalContent"
+                    class="relative bg-white w-full max-w-[428px] rounded-t-[40px] shadow-2xl transform transition-transform duration-300 ease-out translate-y-full overflow-hidden">
+
+                    <!-- Modal 1: QR Code Display -->
+                    <div id="qrCodeModal" class="transition-all duration-300">
+                        <!-- Close Button -->
+                        <button onclick="closeSensorModal()"
+                            class="absolute top-4 right-4 w-8 h-8 bg-hijau-tua rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M13 1L1 13M1 1l12 12" />
+                            </svg>
+                        </button>
+
+                        <!-- Content Container -->
+                        <div class="px-6 pt-12 pb-8">
+
+                            <!-- Header -->
+                            <div class="text-center mb-6">
+                                <h2 class="text-[20px] font-bold text-black mb-1">Sambungkan Perangkat<br>Sensor</h2>
+                                <p class="text-[13px] text-gray-500 mt-2">Pindai kode</p>
+                            </div>
+
+                            <!-- QR Code Container -->
+                            <div class="mb-6">
+                                <div class="bg-[#2D5F2E] rounded-[20px] p-4 shadow-xl">
+                                    <!-- Top Green Bar -->
+                                    <div class="bg-[#3D7A3E] h-8 rounded-t-[16px] mb-3"></div>
+
+                                    <!-- QR Code Frame -->
+                                    <div
+                                        class="bg-gradient-to-b from-[#B8D4B8] to-[#D4E8D4] rounded-[12px] p-6 flex items-center justify-center">
+                                        <!-- QR Code Image -->
+                                        <div class="bg-white p-5 rounded-lg shadow-md">
+                                            <img src="{{ asset('asset/img/qrcode.svg') }}" alt="QR Code"
+                                                class="w-[180px] h-[180px] object-contain">
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Green Bar -->
+                                    <div class="bg-[#3D7A3E] h-8 rounded-b-[16px] mt-3"></div>
+                                </div>
+                            </div>
+
+                            <!-- Pindai Kode Button -->
+                            <button onclick="openScannerModal()"
+                                class="w-full bg-white border-[2.5px] border-[#1F4E20] rounded-xl py-3.5 mb-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                </svg>
+                                <span class="text-[15px] font-semibold text-[#1F4E20]">Pindai Kode</span>
+                            </button>
+
+                            <!-- Info Text -->
+                            <p class="text-[11px] text-gray-600 text-center leading-relaxed px-4">
+                                Arahkan kamera Anda ke<span class="font-semibold"> kode QR</span> pada perangkat untuk
+                                menghubungkan sensor ke lahan.
+                            </p>
+
+                        </div>
+
+                        <!-- Safe Area Bottom Padding -->
+                        <div class="h-6"></div>
+                    </div>
+
+                    <!-- Modal 2: Scanner Camera -->
+                    <div id="scannerModal" class="hidden transition-all duration-300">
+                        <!-- Close Button -->
+                        <button onclick="closeSensorModal()"
+                            class="absolute top-4 right-4 w-8 h-8 bg-hijau-tua rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M13 1L1 13M1 1l12 12" />
+                            </svg>
+                        </button>
+
+                        <!-- Scanner Content -->
+                        <div class="px-6 pt-12 pb-8">
+
+                            <!-- Title -->
+                            <div class="text-center mb-6">
+                                <h2 class="text-[20px] font-bold text-black">ESP32-Lahan 13</h2>
+                            </div>
+
+                            <!-- Scanner Icon/Animation -->
+                            <div class="flex justify-center mb-8">
+                                <div class="relative">
+                                    <!-- Wifi/Signal Icon with Animation -->
+                                    <div class="w-32 h-32 flex items-center justify-center">
+                                        <svg class="wifi-icon" xmlns="http://www.w3.org/2000/svg" width="100"
+                                            height="100" viewBox="0 0 24 24" fill="none" stroke="#1F4E20"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                                            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                                            <line x1="12" y1="20" x2="12.01" y2="20" />
+                                        </svg>
+                                    </div>
+
+                                    <!-- Scanning Animation Circle -->
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div
+                                            class="scanning-circle w-40 h-40 border-4 border-[#1F4E20] rounded-full opacity-30">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Connect Button -->
+                            <button onclick="connectToDevice()"
+                                class="w-full bg-[#1F4E20] text-white rounded-xl py-4 mb-4 font-semibold text-[16px] hover:bg-[#2D5F2E] transition-colors shadow-lg">
+                                Sambungkan Perangkat Sensor
+                            </button>
+
+                            <!-- Back Button -->
+                            <button onclick="backToQRCode()"
+                                class="w-full bg-white text-black rounded-xl py-4 font-medium text-[15px] hover:bg-gray-100 transition-colors">
+                                Kembali
+                            </button>
+
+                        </div>
+
+                        <!-- Safe Area Bottom Padding -->
+                        <div class="h-6"></div>
+                    </div>
+
+                    <!-- Modal 3: Pilih Sensor -->
+                    <div id="selectSensorModal" class="hidden transition-all duration-300">
+                        <!-- Close Button -->
+                        <button onclick="closeSensorModal()"
+                            class="absolute top-4 right-4 w-8 h-8 bg-hijau-tua rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M13 1L1 13M1 1l12 12" />
+                            </svg>
+                        </button>
+
+                        <!-- Content Container -->
+                        <div class="px-6 pt-12 pb-6">
+
+                            <!-- Title -->
+                            <div class="mb-6">
+                                <h2 class="text-[18px] font-bold text-black">Pilih sensor yang digunakan</h2>
+                            </div>
+
+                            <!-- Sensor List -->
+                            <div class="space-y-3 mb-6 max-h-[400px] overflow-y-auto">
+
+                                <!-- Sensor Item 1 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Penyiraman otomatis</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 2 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Pemupukan otomatis</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 3 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Memebaca NPK</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 4 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Membaca Suhu Tanah</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 5 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Membaca Kelembapan Tanah</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 6 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Membaca pH Tanah</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 7 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Membaca Suhu Lingkungan</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 8 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Membaca Kelembapan
+                                        Lingkungan</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                                <!-- Sensor Item 9 -->
+                                <label
+                                    class="flex items-center gap-3 bg-white border-2 border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1F4E20] transition-colors">
+                                    <input type="checkbox"
+                                        class="sensor-checkbox w-5 h-5 text-[#1F4E20] border-2 border-gray-300 rounded focus:ring-2 focus:ring-[#1F4E20]"
+                                        checked>
+                                    <span class="text-[14px] text-black font-medium flex-1">Membaca Cuaca</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="checkmark">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </label>
+
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="space-y-3">
+                                <!-- Selanjutnya Button -->
+                                <button onclick="confirmSensorSelection()"
+                                    class="w-full bg-[#1F4E20] text-white rounded-xl py-4 font-semibold text-[16px] hover:bg-[#2D5F2E] transition-colors shadow-lg">
+                                    Selanjutnya
+                                </button>
+
+                                <!-- Kembali Button -->
+                                <button onclick="backToScanner()"
+                                    class="w-full bg-white text-black rounded-xl py-4 font-medium text-[15px] hover:bg-gray-100 transition-colors">
+                                    Kembali
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Safe Area Bottom Padding -->
+                        <div class="h-6"></div>
+                    </div>
+                    <!-- Modal 4: Success Confirmation -->
+                    <div id="successModal" class="hidden transition-all duration-300">
+                        <!-- Content Container -->
+                        <div class="px-6 pt-16 pb-8 flex flex-col items-center justify-center min-h-[400px]">
+
+                            <!-- Success Icon -->
+                            <div class="mb-6">
+                                <div
+                                    class="w-24 h-24 bg-white rounded-full flex items-center justify-center border-4 border-[#1F4E20] shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Success Message -->
+                            <div class="text-center mb-8">
+                                <p class="text-[16px] text-black font-medium">Lahan 13* berhasil ditambahkan</p>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="w-full space-y-3">
+                                <!-- Detail Button -->
+                                <a href="{{ route('lahan1') }}"
+                                    class="block w-full bg-[#1F4E20] text-white rounded-xl py-4 text-center font-semibold text-[16px] hover:bg-[#2D5F2E] transition-colors shadow-lg">
+                                    Detail
+                                </a>
+
+                                <!-- Selesai Button -->
+                                <button onclick="closeSensorModal()"
+                                    class="w-full bg-white text-black rounded-xl py-4 font-medium text-[15px] hover:bg-gray-100 transition-colors border-2 border-gray-200">
+                                    Selesai
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Safe Area Bottom Padding -->
+                        <div class="h-6"></div>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
     </div>
+
+
+    <style>
+        /* Remove input number arrows */
+        input[type="text"]::-webkit-inner-spin-button,
+        input[type="text"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Modal Slide Animations */
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(100%);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Scanning Animation */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+        }
+
+        @keyframes wifi-pulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .modal-slide-up {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+
+        .modal-slide-down {
+            animation: slideDown 0.3s ease-in forwards;
+        }
+
+        .fade-in-left {
+            animation: fadeInLeft 0.3s ease-out;
+        }
+
+        .fade-in-right {
+            animation: fadeInRight 0.3s ease-out;
+        }
+
+        .scanning-circle {
+            animation: pulse-ring 2s ease-in-out infinite;
+        }
+
+        .wifi-icon {
+            animation: wifi-pulse 2s ease-in-out infinite;
+        }
+
+        /* Prevent body scroll */
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Smooth transitions between modals */
+        #qrCodeModal,
+        #scannerModal {
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Checkbox Styling */
+        .sensor-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #D1D5DB;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .sensor-checkbox:checked {
+            background-color: #1F4E20;
+            border-color: #1F4E20;
+        }
+
+        .sensor-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .sensor-checkbox:hover {
+            border-color: #1F4E20;
+        }
+
+        /* Hide default checkmark SVG */
+        label:has(.sensor-checkbox) .checkmark {
+            display: none;
+        }
+    </style>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -559,6 +1405,528 @@
                     }
                     contents[key].classList.remove('hidden');
                 });
+            });
+        });
+
+        let activeSchedule = 'weekday'; // default
+        let customDate = {
+            day: 1,
+            month: 1,
+            year: 2024
+        };
+
+        function openFilterModal() {
+            const modal = document.getElementById('filterModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeFilterModal() {
+            const modal = document.getElementById('filterModal');
+            modal.classList.add('hidden');
+            document.querySelectorAll('[id^="dropdown"]').forEach(dropdown => {
+                dropdown.classList.add('hidden');
+            });
+        }
+
+        function openWeekdayModal() {
+            document.getElementById('filterModal').classList.add('hidden');
+            document.getElementById('weekdayModal').classList.remove('hidden');
+        }
+
+        function backToMainModal() {
+            document.getElementById('weekdayModal').classList.add('hidden');
+            document.getElementById('filterModal').classList.remove('hidden');
+            const scheduleText = activeSchedule === 'custom' ?
+                `${customDate.day}/${customDate.month}/${customDate.year}` :
+                activeSchedule.charAt(0).toUpperCase() + activeSchedule.slice(1);
+            document.getElementById('selectedSchedule').textContent = scheduleText;
+        }
+
+        function toggleScheduleButton(type) {
+            const weekdayBtn = document.getElementById('weekdayBtn');
+            const weekendBtn = document.getElementById('weekendBtn');
+            const weekdayCheck = document.getElementById('weekdayCheck');
+            const weekendCheck = document.getElementById('weekendCheck');
+
+            if (type === 'weekday') {
+                activeSchedule = 'weekday';
+                weekdayBtn.classList.remove('bg-white', 'hover:bg-gray-50');
+                weekdayBtn.classList.add('bg-green-400', 'hover:bg-green-500');
+                weekdayCheck.classList.remove('invisible');
+
+                weekendBtn.classList.remove('bg-green-400', 'hover:bg-green-500');
+                weekendBtn.classList.add('bg-white', 'hover:bg-gray-50');
+                weekendCheck.classList.add('invisible');
+            } else if (type === 'weekend') {
+                activeSchedule = 'weekend';
+                weekendBtn.classList.remove('bg-white', 'hover:bg-gray-50');
+                weekendBtn.classList.add('bg-green-400', 'hover:bg-green-500');
+                weekendCheck.classList.remove('invisible');
+
+                weekdayBtn.classList.remove('bg-green-400', 'hover:bg-green-500');
+                weekdayBtn.classList.add('bg-white', 'hover:bg-gray-50');
+                weekdayCheck.classList.add('invisible');
+            }
+        }
+
+        function selectScheduleType(type) {
+            if (type !== 'Custom') {
+                activeSchedule = type.toLowerCase();
+                backToMainModal();
+            } else {
+                openCustomDateModal();
+            }
+        }
+
+        function openCustomDateModal() {
+            document.getElementById('filterModal').classList.add('hidden');
+            document.getElementById('customDateModal').classList.remove('hidden');
+
+            // Initialize scroll positions to current date
+            const today = new Date();
+            initializeScrollPositions(today.getDate(), today.getMonth() + 1, today.getFullYear());
+        }
+
+        function closeCustomDateModal() {
+            document.getElementById('customDateModal').classList.add('hidden');
+            document.getElementById('filterModal').classList.remove('hidden');
+        }
+
+        function initializeScrollPositions(day, month, year) {
+            const dateScroll = document.getElementById('dateScroll');
+            const monthScroll = document.getElementById('monthScroll');
+            const yearScroll = document.getElementById('yearScroll');
+
+            // Scroll to selected values (each item height is ~29px: 16px text + 6px gap + padding)
+            dateScroll.scrollTop = (day - 1) * 29;
+            monthScroll.scrollTop = (month - 1) * 29;
+            yearScroll.scrollTop = (year - 2024) * 29;
+        }
+
+        function getScrolledValue(scrollElement, startValue) {
+            const scrollTop = scrollElement.scrollTop;
+            const itemHeight = 29; // approximate height of each item
+            return startValue + Math.round(scrollTop / itemHeight);
+        }
+
+        function saveCustomDate() {
+            const dateScroll = document.getElementById('dateScroll');
+            const monthScroll = document.getElementById('monthScroll');
+            const yearScroll = document.getElementById('yearScroll');
+
+            customDate.day = getScrolledValue(dateScroll, 1);
+            customDate.month = getScrolledValue(monthScroll, 1);
+            customDate.year = getScrolledValue(yearScroll, 2024);
+
+            activeSchedule = 'custom';
+            closeCustomDateModal();
+            backToMainModal();
+        }
+
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            document.querySelectorAll('[id^="dropdown"]').forEach(d => {
+                if (d.id !== dropdownId) {
+                    d.classList.add('hidden');
+                }
+            });
+            dropdown.classList.toggle('hidden');
+        }
+
+        function selectAmPm(dropdownId, selectedId, value) {
+            document.getElementById(selectedId).textContent = value;
+            document.getElementById(dropdownId).classList.add('hidden');
+        }
+
+        // Event listeners
+        document.getElementById('filterModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeFilterModal();
+            }
+        });
+
+        document.getElementById('weekdayModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                document.getElementById('weekdayModal').classList.add('hidden');
+            }
+        });
+
+        document.getElementById('customDateModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCustomDateModal();
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('[onclick^="toggleDropdown"]') && !e.target.closest('[id^="dropdown"]')) {
+                document.querySelectorAll('[id^="dropdown"]').forEach(dropdown => {
+                    dropdown.classList.add('hidden');
+                });
+            }
+        });
+        // Data lahan 
+        let currentLahanData = {
+            nama: 'Lahan 1',
+            jenis: 'Padi',
+            luas: 2
+        };
+
+        // Fungsi untuk membuka modal edit
+        function openEditModal() {
+            // Populate form dengan data yang ada
+            document.getElementById('editNamaLahan').value = currentLahanData.nama;
+            document.getElementById('editJenisTanaman').value = currentLahanData.jenis;
+            document.getElementById('editLuasLahan').value = currentLahanData.luas;
+
+            // Tampilkan modal
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
+        // Fungsi untuk menutup modal edit
+        function closeEditModal() {
+            document.getElementById('editModal').classList.add('hidden');
+        }
+
+        // Fungsi untuk menyimpan perubahan data
+        function saveEditData() {
+            // Ambil nilai dari form
+            const namaLahan = document.getElementById('editNamaLahan').value.trim();
+            const jenisTanaman = document.getElementById('editJenisTanaman').value.trim();
+            const luasLahan = parseFloat(document.getElementById('editLuasLahan').value);
+
+            // Validasi input
+            if (!namaLahan) {
+                alert('Nama lahan tidak boleh kosong!');
+                return;
+            }
+
+            if (!jenisTanaman) {
+                alert('Jenis tanaman tidak boleh kosong!');
+                return;
+            }
+
+            if (!luasLahan || luasLahan <= 0) {
+                alert('Luas lahan harus lebih dari 0!');
+                return;
+            }
+
+            // Update data
+            currentLahanData = {
+                nama: namaLahan,
+                jenis: jenisTanaman,
+                luas: luasLahan
+            };
+
+            console.log('Data berhasil disimpan:', currentLahanData);
+
+            // Tutup modal
+            closeEditModal();
+
+            // Tampilkan notifikasi sukses (opsional)
+            alert('Data berhasil disimpan!');
+        }
+
+        // Event listener untuk menutup modal saat klik di luar area modal
+        document.getElementById('editModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeEditModal();
+            }
+        });
+
+        // Event listener untuk tombol Enter pada form
+        document.addEventListener('DOMContentLoaded', function() {
+            const editInputs = ['editNamaLahan', 'editJenisTanaman', 'editLuasLahan'];
+
+            editInputs.forEach(inputId => {
+                document.getElementById(inputId)?.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        saveEditData();
+                    }
+                });
+            });
+
+            // Event listener untuk tombol Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('editModal');
+                    if (modal && !modal.classList.contains('hidden')) {
+                        closeEditModal();
+                    }
+                }
+            });
+        });
+        // Fungsi untuk membuka modal delete
+        function openDeleteModal() {
+            const modal = document.getElementById('deleteModal');
+            modal.classList.remove('hidden');
+        }
+
+        // Fungsi untuk menutup modal delete
+        function closeDeleteModal() {
+            const modal = document.getElementById('deleteModal');
+            modal.classList.add('hidden');
+        }
+
+        // Fungsi konfirmasi delete
+        function confirmDelete() {
+            const cards = document.querySelectorAll('.notification-card');
+            const noNotification = document.getElementById('noNotification');
+
+            cards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+            if (noNotification) {
+                noNotification.classList.remove('hidden');
+            }
+
+            closeDeleteModal();
+        }
+        // Fungsi untuk membuka modal sensor dengan animasi slide-up
+        function openSensorModal() {
+            const modal = document.getElementById('sensorModal');
+            const modalContent = document.getElementById('sensorModalContent');
+            const overlay = document.getElementById('sensorOverlay');
+            const qrCodeModal = document.getElementById('qrCodeModal');
+            const scannerModal = document.getElementById('scannerModal');
+            const selectSensorModal = document.getElementById('selectSensorModal');
+            const successModal = document.getElementById('successModal');
+
+            // Reset state - show QR code modal, hide others
+            qrCodeModal.classList.remove('hidden');
+            scannerModal.classList.add('hidden');
+            selectSensorModal.classList.add('hidden');
+            successModal.classList.add('hidden');
+
+            // Show modal
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+
+            // Trigger animation
+            setTimeout(() => {
+                modalContent.classList.remove('translate-y-full');
+                modalContent.classList.add('modal-slide-up');
+                overlay.style.opacity = '1';
+            }, 10);
+        }
+
+        // Fungsi untuk membuka scanner modal
+        function openScannerModal() {
+            const qrCodeModal = document.getElementById('qrCodeModal');
+            const scannerModal = document.getElementById('scannerModal');
+
+            // Slide out QR code modal to left
+            qrCodeModal.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+            qrCodeModal.style.transform = 'translateX(-100%)';
+            qrCodeModal.style.opacity = '0';
+
+            // Show scanner modal with slide in from right
+            setTimeout(() => {
+                qrCodeModal.classList.add('hidden');
+                qrCodeModal.style.transform = '';
+                qrCodeModal.style.opacity = '';
+
+                scannerModal.classList.remove('hidden');
+                scannerModal.classList.add('fade-in-right');
+            }, 300);
+        }
+
+        // Fungsi untuk kembali ke QR code modal
+        function backToQRCode() {
+            const qrCodeModal = document.getElementById('qrCodeModal');
+            const scannerModal = document.getElementById('scannerModal');
+
+            // Slide out scanner modal to right
+            scannerModal.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+            scannerModal.style.transform = 'translateX(100%)';
+            scannerModal.style.opacity = '0';
+
+            // Show QR code modal with slide in from left
+            setTimeout(() => {
+                scannerModal.classList.add('hidden');
+                scannerModal.style.transform = '';
+                scannerModal.style.opacity = '';
+                scannerModal.classList.remove('fade-in-right');
+
+                qrCodeModal.classList.remove('hidden');
+                qrCodeModal.classList.add('fade-in-left');
+
+                setTimeout(() => {
+                    qrCodeModal.classList.remove('fade-in-left');
+                }, 300);
+            }, 300);
+        }
+
+        // Fungsi untuk connect ke device dan buka modal pilih sensor
+        function connectToDevice() {
+            const scannerModal = document.getElementById('scannerModal');
+            const selectSensorModal = document.getElementById('selectSensorModal');
+
+            // Slide out scanner modal to left
+            scannerModal.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+            scannerModal.style.transform = 'translateX(-100%)';
+            scannerModal.style.opacity = '0';
+
+            // Show select sensor modal with slide in from right
+            setTimeout(() => {
+                scannerModal.classList.add('hidden');
+                scannerModal.style.transform = '';
+                scannerModal.style.opacity = '';
+
+                selectSensorModal.classList.remove('hidden');
+                selectSensorModal.classList.add('fade-in-right');
+
+                setTimeout(() => {
+                    selectSensorModal.classList.remove('fade-in-right');
+                }, 300);
+            }, 300);
+        }
+
+        // Fungsi untuk kembali ke scanner dari pilih sensor
+        function backToScanner() {
+            const scannerModal = document.getElementById('scannerModal');
+            const selectSensorModal = document.getElementById('selectSensorModal');
+
+            // Slide out select sensor modal to right
+            selectSensorModal.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+            selectSensorModal.style.transform = 'translateX(100%)';
+            selectSensorModal.style.opacity = '0';
+
+            // Show scanner modal with slide in from left
+            setTimeout(() => {
+                selectSensorModal.classList.add('hidden');
+                selectSensorModal.style.transform = '';
+                selectSensorModal.style.opacity = '';
+
+                scannerModal.classList.remove('hidden');
+                scannerModal.classList.add('fade-in-left');
+
+                setTimeout(() => {
+                    scannerModal.classList.remove('fade-in-left');
+                }, 300);
+            }, 300);
+        }
+
+        // Fungsi untuk konfirmasi pilihan sensor dan tampilkan success modal
+        function confirmSensorSelection() {
+            const selectSensorModal = document.getElementById('selectSensorModal');
+            const successModal = document.getElementById('successModal');
+            const checkboxes = document.querySelectorAll('.sensor-checkbox:checked');
+            const selectedSensors = Array.from(checkboxes).map(cb => cb.parentElement.querySelector('span').textContent);
+
+            console.log('Sensor yang dipilih:', selectedSensors);
+
+            // Slide out select sensor modal to left
+            selectSensorModal.style.transition = 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out';
+            selectSensorModal.style.transform = 'translateX(-100%)';
+            selectSensorModal.style.opacity = '0';
+
+            // Show success modal with fade in
+            setTimeout(() => {
+                selectSensorModal.classList.add('hidden');
+                selectSensorModal.style.transform = '';
+                selectSensorModal.style.opacity = '';
+
+                successModal.classList.remove('hidden');
+                successModal.style.opacity = '0';
+                successModal.style.transform = 'scale(0.9)';
+
+                setTimeout(() => {
+                    successModal.style.transition = 'all 0.3s ease-out';
+                    successModal.style.opacity = '1';
+                    successModal.style.transform = 'scale(1)';
+                }, 50);
+            }, 300);
+        }
+
+        // Fungsi untuk selesai dan tutup modal
+        function finishAddingSensor() {
+            closeSensorModal();
+
+            // Reload halaman atau update UI
+            setTimeout(() => {
+                window.location.reload();
+            }, 300);
+        }
+
+        // Fungsi untuk menutup modal sensor
+        function closeSensorModal() {
+            const modal = document.getElementById('sensorModal');
+            const modalContent = document.getElementById('sensorModalContent');
+            const overlay = document.getElementById('sensorOverlay');
+
+            // Start animation
+            modalContent.classList.remove('modal-slide-up');
+            modalContent.classList.add('modal-slide-down');
+            overlay.style.opacity = '0';
+
+            // Hide modal after animation
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.classList.remove('modal-slide-down');
+                modalContent.classList.add('translate-y-full');
+                document.body.classList.remove('modal-open');
+            }, 300);
+        }
+
+        // Event listener untuk tombol Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('sensorModal');
+                const scannerModal = document.getElementById('scannerModal');
+                const selectSensorModal = document.getElementById('selectSensorModal');
+                const successModal = document.getElementById('successModal');
+
+                if (modal && !modal.classList.contains('hidden')) {
+                    // Jika di success modal, tutup modal
+                    if (!successModal.classList.contains('hidden')) {
+                        finishAddingSensor();
+                    }
+                    // Jika di select sensor modal, kembali ke scanner
+                    else if (!selectSensorModal.classList.contains('hidden')) {
+                        backToScanner();
+                    }
+                    // Jika di scanner modal, kembali ke QR code
+                    else if (!scannerModal.classList.contains('hidden')) {
+                        backToQRCode();
+                    }
+                    // Jika di QR code modal, tutup modal
+                    else {
+                        closeSensorModal();
+                    }
+                }
+            }
+        });
+
+        // Prevent closing when clicking inside modal content
+        document.getElementById('sensorModalContent')?.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Handle checkbox styling
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.sensor-checkbox');
+
+            checkboxes.forEach(checkbox => {
+                const label = checkbox.parentElement;
+
+                // Update visual state on change
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        label.classList.add('border-[#1F4E20]');
+                        label.classList.remove('border-gray-200');
+                    } else {
+                        label.classList.remove('border-[#1F4E20]');
+                        label.classList.add('border-gray-200');
+                    }
+                });
+
+                // Initialize state
+                if (checkbox.checked) {
+                    label.classList.add('border-[#1F4E20]');
+                    label.classList.remove('border-gray-200');
+                }
             });
         });
     </script>

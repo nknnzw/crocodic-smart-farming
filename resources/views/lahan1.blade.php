@@ -18,8 +18,6 @@
                     </a>
                     <span class="text-black text-[22px] font-semibold">Lahan 1</span>
                 </div>
-
-
             </div>
 
             <!-- Info Luas & Tanaman -->
@@ -927,13 +925,12 @@
                                 <div class="relative">
                                     <!-- Wifi/Signal Icon with Animation -->
                                     <div class="w-32 h-32 flex items-center justify-center">
-                                        <svg class="wifi-icon" xmlns="http://www.w3.org/2000/svg" width="100"
-                                            height="100" viewBox="0 0 24 24" fill="none" stroke="#1F4E20"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-                                            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-                                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-                                            <line x1="12" y1="20" x2="12.01" y2="20" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="111" height="111"
+                                            viewBox="0 0 111 111" fill="none">
+                                            <rect width="110.75" height="110.75" rx="55.375" fill="white" />
+                                            <path
+                                                d="M43.2292 67.5215C40.1069 64.4277 38.1876 60.1309 38.1876 55.3757C38.1876 50.6204 40.1069 46.3236 43.2292 43.2298L47.297 47.2975C45.2058 49.36 43.9167 52.2246 43.9167 55.3757C43.9167 58.5267 45.2058 61.3913 47.2683 63.4824L43.2292 67.5215ZM67.5209 67.5215C70.6433 64.4277 72.5626 60.1309 72.5626 55.3757C72.5626 50.6204 70.6433 46.3236 67.5209 43.2298L63.4532 47.2975C65.5444 49.36 66.8334 52.2246 66.8334 55.3757C66.8334 58.5267 65.5444 61.3913 63.4819 63.4824L67.5209 67.5215ZM55.3751 49.6465C52.224 49.6465 49.6459 52.2246 49.6459 55.3757C49.6459 58.5267 52.224 61.1048 55.3751 61.1048C58.5261 61.1048 61.1042 58.5267 61.1042 55.3757C61.1042 52.2246 58.5261 49.6465 55.3751 49.6465ZM78.2918 55.3757C78.2918 61.7064 75.7136 67.4355 71.56 71.5605L75.6277 75.6283C80.8126 70.4434 84.0209 63.2819 84.0209 55.3757C84.0209 47.4694 80.8126 40.3079 75.6277 35.123L71.56 39.1908C73.6968 41.3091 75.3921 43.8304 76.5477 46.6086C77.7032 49.3869 78.296 52.3667 78.2918 55.3757ZM39.1902 39.1908L35.1225 35.123C29.9376 40.3079 26.7292 47.4694 26.7292 55.3757C26.7292 63.2819 29.9376 70.4434 35.1225 75.6283L39.1902 71.5605C35.0365 67.4355 32.4584 61.7064 32.4584 55.3757C32.4584 49.0449 35.0365 43.3158 39.1902 39.1908Z"
+                                                fill="#1F4E20" />
                                         </svg>
                                     </div>
 
@@ -1136,51 +1133,55 @@
                         <!-- Safe Area Bottom Padding -->
                         <div class="h-6"></div>
                     </div>
-                    <!-- Modal 4: Success Confirmation -->
-                    <div id="successModal" class="hidden transition-all duration-300">
-                        <!-- Content Container -->
-                        <div class="px-6 pt-16 pb-8 flex flex-col items-center justify-center min-h-[400px]">
-
-                            <!-- Success Icon -->
-                            <div class="mb-6">
-                                <div
-                                    class="w-24 h-24 bg-white rounded-full flex items-center justify-center border-4 border-[#1F4E20] shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                                        viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="3"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <!-- Success Message -->
-                            <div class="text-center mb-8">
-                                <p class="text-[16px] text-black font-medium">Lahan 13* berhasil ditambahkan</p>
-                            </div>
-
-                            <!-- Action Buttons -->
-                            <div class="w-full space-y-3">
-                                <!-- Detail Button -->
-                                <a href="{{ route('lahan1') }}"
-                                    class="block w-full bg-[#1F4E20] text-white rounded-xl py-4 text-center font-semibold text-[16px] hover:bg-[#2D5F2E] transition-colors shadow-lg">
-                                    Detail
-                                </a>
-
-                                <!-- Selesai Button -->
-                                <button onclick="closeSensorModal()"
-                                    class="w-full bg-white text-black rounded-xl py-4 font-medium text-[15px] hover:bg-gray-100 transition-colors border-2 border-gray-200">
-                                    Selesai
-                                </button>
-                            </div>
-
-                        </div>
-
-                        <!-- Safe Area Bottom Padding -->
-                        <div class="h-6"></div>
-                    </div>
 
                 </div>
             </div>
+            <!-- Modal 4: Success Confirmation -->
+            <div id="successModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+                <!-- Backdrop -->
+                <div class="absolute inset-0 bg-black/50"></div>
+
+                <!-- Modal Card -->
+                <div class="relative bg-white rounded-3xl w-full max-w-sm shadow-2xl transform transition-all">
+                    <!-- Content Container -->
+                    <div class="px-6 pt-12 pb-8 flex flex-col items-center">
+
+                        <!-- Success Icon -->
+                        <div class="mb-6">
+                            <div
+                                class="w-20 h-20 bg-white rounded-full flex items-center justify-center border-4 border-[#1F4E20] shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                    viewBox="0 0 24 24" fill="none" stroke="#1F4E20" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div class="text-center mb-8">
+                            <p class="text-[15px] text-black font-medium">Lahan 13* berhasil ditambahkan</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="w-full space-y-3">
+                            <!-- Detail Button -->
+                            <a href="{{ route('lahan13') }}"
+                                class="block w-full bg-[#1F4E20] text-white rounded-xl py-3.5 text-center font-semibold text-[15px] hover:bg-[#2D5F2E] transition-colors shadow-md">
+                                Detail
+                            </a>
+
+                            <!-- Selesai Button -->
+                            <button onclick="finishAddingSensor()"
+                                class="w-full bg-white text-black rounded-xl py-3.5 font-medium text-[15px] hover:bg-gray-50 transition-colors border-2 border-gray-200">
+                                Selesai
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
 
         </div>
@@ -1308,7 +1309,7 @@
             overflow: hidden;
         }
 
-        /* Smooth transitions between modals */
+
         #qrCodeModal,
         #scannerModal {
             transition: all 0.3s ease-in-out;
@@ -1497,7 +1498,6 @@
             const monthScroll = document.getElementById('monthScroll');
             const yearScroll = document.getElementById('yearScroll');
 
-            // Scroll to selected values (each item height is ~29px: 16px text + 6px gap + padding)
             dateScroll.scrollTop = (day - 1) * 29;
             monthScroll.scrollTop = (month - 1) * 29;
             yearScroll.scrollTop = (year - 2024) * 29;
@@ -1505,7 +1505,7 @@
 
         function getScrolledValue(scrollElement, startValue) {
             const scrollTop = scrollElement.scrollTop;
-            const itemHeight = 29; // approximate height of each item
+            const itemHeight = 29;
             return startValue + Math.round(scrollTop / itemHeight);
         }
 
@@ -1810,6 +1810,7 @@
 
         // Fungsi untuk konfirmasi pilihan sensor dan tampilkan success modal
         function confirmSensorSelection() {
+            const sensorModal = document.getElementById('sensorModal');
             const selectSensorModal = document.getElementById('selectSensorModal');
             const successModal = document.getElementById('successModal');
             const checkboxes = document.querySelectorAll('.sensor-checkbox:checked');
@@ -1822,34 +1823,44 @@
             selectSensorModal.style.transform = 'translateX(-100%)';
             selectSensorModal.style.opacity = '0';
 
-            // Show success modal with fade in
+            // Hide sensor modal completely and show success modal
             setTimeout(() => {
+                // Hide semua modal sensor
                 selectSensorModal.classList.add('hidden');
                 selectSensorModal.style.transform = '';
                 selectSensorModal.style.opacity = '';
 
-                successModal.classList.remove('hidden');
-                successModal.style.opacity = '0';
-                successModal.style.transform = 'scale(0.9)';
 
-                setTimeout(() => {
-                    successModal.style.transition = 'all 0.3s ease-out';
-                    successModal.style.opacity = '1';
-                    successModal.style.transform = 'scale(1)';
-                }, 50);
+                sensorModal.classList.add('hidden');
+
+                // Show success modal - centered
+                successModal.classList.remove('hidden');
             }, 300);
         }
 
         // Fungsi untuk selesai dan tutup modal
         function finishAddingSensor() {
-            closeSensorModal();
+            const successModal = document.getElementById('successModal');
+            const sensorModal = document.getElementById('sensorModal');
 
-            // Reload halaman atau update UI
+            // Fade out success modal
+            successModal.style.transition = 'opacity 0.3s ease-out';
+            successModal.style.opacity = '0';
+
             setTimeout(() => {
-                window.location.reload();
+                successModal.classList.add('hidden');
+                successModal.style.opacity = '';
+
+                // Reset sensor modal untuk next time
+                const modalContent = document.getElementById('sensorModalContent');
+                modalContent.classList.remove('modal-slide-up');
+                modalContent.classList.add('translate-y-full');
+                document.body.classList.remove('modal-open');
+
+                // Reload halaman atau update UI
+                window.location();
             }, 300);
         }
-
         // Fungsi untuk menutup modal sensor
         function closeSensorModal() {
             const modal = document.getElementById('sensorModal');
@@ -1879,20 +1890,13 @@
                 const successModal = document.getElementById('successModal');
 
                 if (modal && !modal.classList.contains('hidden')) {
-                    // Jika di success modal, tutup modal
                     if (!successModal.classList.contains('hidden')) {
                         finishAddingSensor();
-                    }
-                    // Jika di select sensor modal, kembali ke scanner
-                    else if (!selectSensorModal.classList.contains('hidden')) {
+                    } else if (!selectSensorModal.classList.contains('hidden')) {
                         backToScanner();
-                    }
-                    // Jika di scanner modal, kembali ke QR code
-                    else if (!scannerModal.classList.contains('hidden')) {
+                    } else if (!scannerModal.classList.contains('hidden')) {
                         backToQRCode();
-                    }
-                    // Jika di QR code modal, tutup modal
-                    else {
+                    } else {
                         closeSensorModal();
                     }
                 }

@@ -1,5 +1,5 @@
 @extends('navbar')
-@section('title', 'Lahan3')
+@section('title', 'Lahan13')
 @section('content')
 
     <div class="bg-hijau-paling-muda min-h-screen">
@@ -16,7 +16,7 @@
                                 fill="#1F4E20" />
                         </svg>
                     </a>
-                    <span class="text-black text-[22px] font-semibold">Lahan 3</span>
+                    <span class="text-black text-[22px] font-semibold">Lahan 13</span>
                 </div>
             </div>
 
@@ -25,10 +25,10 @@
                 <!-- Kiri: Info Lahan -->
                 <div class="flex flex-col">
                     <p class="text-black text-sm font-medium">
-                        Luas: <span class="font-normal">1 Ha</span>
+                        Luas: <span class="font-normal">8 Ha</span>
                     </p>
                     <p class="text-black text-sm font-medium">
-                        Tanaman: <span class="font-normal">Cabai</span>
+                        Tanaman: <span class="font-normal">Jagung</span>
                     </p>
                 </div>
 

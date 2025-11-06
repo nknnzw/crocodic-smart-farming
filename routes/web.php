@@ -65,3 +65,4 @@ Route::get('/lahan9', [LahanController::class, 'lahan9'])->name('lahan9');
 Route::get('/lahan10', [LahanController::class, 'lahan10'])->name('lahan10');
 Route::get('/lahan11', [LahanController::class, 'lahan11'])->name('lahan11');
 Route::get('/lahan12', [LahanController::class, 'lahan12'])->name('lahan12');
+Route::get('/lahan13', [LahanController::class, 'lahan13'])->name('lahan13');

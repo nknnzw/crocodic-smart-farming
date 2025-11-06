@@ -148,22 +148,23 @@
             color: #C8C6C1;
             font-weight: 500;
         }
-         .custom-scrollbar::-webkit-scrollbar {
-                width: 6px;
-            }
-            
-            .custom-scrollbar::-webkit-scrollbar-track {
-                background: transparent;
-            }
-            
-            .custom-scrollbar::-webkit-scrollbar-thumb {
-                background: #d1d5db;
-                border-radius: 3px;
-            }
-            
-            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                background: #9ca3af;
-            }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 3px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
     </style>
 </head>
 
@@ -177,7 +178,6 @@
         <!-- Beranda -->
         <a href="{{ route('beranda') }}" class="nav-item flex flex-col items-center" data-page="beranda">
             <div class="nav-bubble">
-                <!-- SVG aktif (putih di atas bubble hijau) -->
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -188,7 +188,6 @@
 
             <div
                 class="nav-icon-wrapper w-[60px] h-[60px] bg-hijau-tua rounded-full flex items-center justify-center shadow-[0_3px_6px_rgba(0,0,0,0.15)]">
-                <!-- SVG utama -->
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -207,11 +206,9 @@
             <div class="nav-bubble">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <!-- Kotak -->
                     <path
                         d="M1 7.75556C1 5.39111 1 4.20889 1.46022 3.30533C1.86501 2.51091 2.51091 1.86501 3.30533 1.46022C4.20889 1 5.39111 1 7.75556 1H13.2444C15.6089 1 16.7911 1 17.6947 1.46022C18.4891 1.86501 19.135 2.51091 19.5398 3.30533C20 4.20889 20 5.39111 20 7.75556V13.2444C20 15.6089 20 16.7911 19.5398 17.6947C19.135 18.4891 18.4891 19.135 17.6947 19.5398C16.7911 20 15.6089 20 13.2444 20H7.75556C5.39111 20 4.20889 20 3.30533 19.5398C2.51091 19.135 1.86501 18.4891 1.46022 17.6947C1 16.7911 1 15.6089 1 13.2444V7.75556Z"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <!-- Garis tengah (ikon baru) -->
                     <path d="M14.4444 8L10.75 11.6944L8.63889 9.58333L6 12.2222" stroke="white" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -220,11 +217,9 @@
             <div class="nav-icon-wrapper">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
-                    <!-- Kotak -->
                     <path
                         d="M1 7.75556C1 5.39111 1 4.20889 1.46022 3.30533C1.86501 2.51091 2.51091 1.86501 3.30533 1.46022C4.20889 1 5.39111 1 7.75556 1H13.2444C15.6089 1 16.7911 1 17.6947 1.46022C18.4891 1.86501 19.135 2.51091 19.5398 3.30533C20 4.20889 20 5.39111 20 7.75556V13.2444C20 15.6089 20 16.7911 19.5398 17.6947C19.135 18.4891 18.4891 19.135 17.6947 19.5398C16.7911 20 15.6089 20 13.2444 20H7.75556C5.39111 20 4.20889 20 3.30533 19.5398C2.51091 19.135 1.86501 18.4891 1.46022 17.6947C1 16.7911 1 15.6089 1 13.2444V7.75556Z"
                         stroke="#C8C6C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <!-- Garis tengah (ikon baru) -->
                     <path d="M14.4444 8L10.75 11.6944L8.63889 9.58333L6 12.2222" stroke="#9E9E9E" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -237,7 +232,7 @@
         <!-- Lahan -->
         <a href="{{ route('lahan') }}" class="nav-item flex flex-col items-center" data-page="lahan">
             <div class="nav-bubble">
-                <!-- Ikon aktif (putih) -->
+                <!-- Ikon aktif  -->
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -247,7 +242,7 @@
             </div>
 
             <div class="nav-icon-wrapper">
-                <!-- Ikon tidak aktif (abu-abu) -->
+                <!-- Ikon tidak aktif -->
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -263,7 +258,7 @@
         <!-- Setelan -->
         <a href="{{ route('setelan') }}" class="nav-item flex flex-col items-center" data-page="setelan">
             <div class="nav-bubble">
-                <!-- Ikon aktif (warna putih) -->
+                <!-- Ikon aktif  -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -276,7 +271,7 @@
             </div>
 
             <div class="nav-icon-wrapper">
-                <!-- Ikon tidak aktif (abu-abu) -->
+                <!-- Ikon tidak aktif -->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -349,7 +344,7 @@
                         }
                     });
 
-                    // Resize SVG jadi 26x26
+                    // Resize SVG 
                     iconSvg.setAttribute('width', '26');
                     iconSvg.setAttribute('height', '26');
                 }
@@ -364,42 +359,36 @@
                         setActive(berandaItem);
                     }
                 } else if (currentPath === '/notifikasi') {
-                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
                     const berandaItem = document.querySelector('[data-page="beranda"]');
                     if (berandaItem) {
                         removeAllActive();
                         setActive(berandaItem);
                     }
                 } else if (currentPath === '/profil') {
-                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
-                    const setelanaItem = document.querySelector('[data-page="setelan"]');
-                    if (setelanaItem) {
-                        removeAllActive();
-                        setActive(setelanaItem);
-                    }  
-                  } else if (currentPath === '/zona') {
-                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
                     const setelanaItem = document.querySelector('[data-page="setelan"]');
                     if (setelanaItem) {
                         removeAllActive();
                         setActive(setelanaItem);
                     }
-                   } else if (currentPath === '/tentang') {
-                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
+                } else if (currentPath === '/zona') {
                     const setelanaItem = document.querySelector('[data-page="setelan"]');
                     if (setelanaItem) {
                         removeAllActive();
                         setActive(setelanaItem);
                     }
-                    } else if (currentPath === '/notif') {
-                    // 🔹 Khusus halaman notifikasi, tetap aktifkan Beranda
+                } else if (currentPath === '/tentang') {
+                    const setelanaItem = document.querySelector('[data-page="setelan"]');
+                    if (setelanaItem) {
+                        removeAllActive();
+                        setActive(setelanaItem);
+                    }
+                } else if (currentPath === '/notif') {
                     const setelanaItem = document.querySelector('[data-page="setelan"]');
                     if (setelanaItem) {
                         removeAllActive();
                         setActive(setelanaItem);
                     }
                 } else {
-                    // Untuk path lainnya, cek berdasarkan data-page
                     navItems.forEach(item => {
                         const page = item.getAttribute('data-page');
                         if (currentPath.includes(page)) {

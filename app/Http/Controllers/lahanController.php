@@ -70,4 +70,9 @@ class LahanController extends Controller
     {
         return view('lahan12');
     }
+
+    public function lahan13()
+    {
+        return view('lahan13');
+    }
 }

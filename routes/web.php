@@ -9,11 +9,16 @@ use App\Http\Controllers\NotifController;
 use App\Http\Controllers\ZonawaktuController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\TentangController;
+use App\Http\Controllers\SplashController;
 use Illuminate\Support\Facades\Route;
 
+// Tambahkan route ini di paling atas, sebelum route lainnya
 Route::get('/', function () {
-    return view('beranda');
-});
+    return view('splash');
+})->name('splash');
+
+// Ubah route beranda menjadi:
+Route::get('/beranda', [BerandaController::class, 'beranda'])->name('beranda');
 
 Route::controller(BerandaController::class)->group(function () {
     Route::get('beranda', 'beranda')->name('beranda');

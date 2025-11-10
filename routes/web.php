@@ -12,12 +12,10 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SplashController;
 use Illuminate\Support\Facades\Route;
 
-// Tambahkan route ini di paling atas, sebelum route lainnya
-Route::get('/', function () {
-    return view('splash');
-})->name('splash');
+Route::get('/', [SplashController::class, 'index'])->name('splash');
+Route::post('/splash/mark-shown', [SplashController::class, 'markAsShown'])->name('splash.markShown');
 
-// Ubah route beranda menjadi:
+
 Route::get('/beranda', [BerandaController::class, 'beranda'])->name('beranda');
 
 Route::controller(BerandaController::class)->group(function () {

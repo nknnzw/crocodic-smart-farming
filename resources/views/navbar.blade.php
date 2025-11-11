@@ -170,10 +170,7 @@
 
 <body class="bg-hijau-paling-muda font-poppins min-w-[402px]">
     @yield('content')
-    @if(!session()->has('splash_shown'))
-        @include('components.splash')
-        @php session(['splash_shown' => true]) @endphp
-    @endif
+
     <!-- Bottom Navigation -->
     <div
         class="fixed bottom-0 left-0 right-0 w-full h-[100px] bg-white rounded-t-[20px] shadow-[0_-2px_10px_rgba(0,0,0,0.08)] flex justify-around items-end px-6 pb-4 z-40">

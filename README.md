@@ -3,3 +3,5 @@
 
 Karena projek ini untuk mobile view jadi saat dijalankan gunakan tampilan seperti berikut <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8df4e8a0-a2fd-4eac-a357-7d850fb22164" />
 
+Projek ini hanya front end jadi modal-modal yang sudah ada mungkin tidak berfungsi
+
